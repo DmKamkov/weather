@@ -85,6 +85,7 @@ export function mapOneCallData (data) {
 
     return transformItems.map(item => ({
         dt: FormatSecondIntoHours(item.dt),
+        calendarDay: FormatSecondIntoHours(item.dt, false, true),
         dayPeriod: dayOrNight(FormatSecondIntoHours(item.dt, true), FormatSecondIntoHours(item.sunrise, true), FormatSecondIntoHours(item.sunset, true)),
         sunrise: FormatSecondIntoHours(item.sunrise),
         sunset: FormatSecondIntoHours(item.sunset),

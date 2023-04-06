@@ -8,6 +8,9 @@
                 :day="data.dayPeriod"
             />
             <div class="v-card-text-part__text-temp">
+                <span class="v-card-text-part__bold v-card-text-part__date">
+                    {{ data.calendarDay }}
+                </span>
                 <p class="v-card-text-part__bold">
                     {{ data.weatherMain + ', ' + data.temperature + '&deg;C' }}
                 </p>
@@ -125,6 +128,15 @@ export default {
 
     &__medium {
         font-weight: 600;
+    }
+
+    &__date {
+        background-color: #0085D9;
+        border-radius: 10px;
+        color: white;
+        font-size: 24px;
+        padding: 5px 8px;
+        width: fit-content;
     }
 }
 
