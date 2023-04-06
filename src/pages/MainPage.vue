@@ -87,7 +87,7 @@ export default {
         const corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/'
         const freeGeoIpUrl = 'https://freegeoip.app/json/'
         
-        /* async function getIp () {
+        async function getIp () {
             isLoading.value = true
             try {
                 const { data } = await axios.get('https://api.ipify.org/?format=json')
@@ -100,7 +100,7 @@ export default {
                 console.error(error)
                 isLoading.value = false
             }
-        } */
+        }
         
         function addNewCard () {
             if (cardAmount.value.length < 5) {
@@ -120,9 +120,7 @@ export default {
             openPopup.value = true
         }
 
-        /* getIp() */
-
-        defaultCity.value = { coord: { lat: 48.45, lon: 34.9833 } }
+        getIp()
 
         return {
             cardAmount,
